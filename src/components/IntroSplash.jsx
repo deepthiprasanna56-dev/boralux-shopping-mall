@@ -51,6 +51,18 @@ export default function IntroSplash() {
           role="dialog"
           aria-label="Welcome to BORALUX Luxury Mall"
         >
+          {/* A real mall interior grounds the opening in a shopping destination. */}
+          <motion.img
+            src="https://images.unsplash.com/photo-1672135383688-8fdf9a8011e1?auto=format&fit=crop&w=2400&q=85"
+            alt=""
+            aria-hidden="true"
+            initial={{ scale: 1.08, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.3 }}
+            transition={{ duration: 2.2, ease: 'easeOut' }}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#080410]/65 via-[#0b0618]/60 to-[#080410]/90" />
+
           {/* Deep Galaxy Nebulae Gradients */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-purple-900/40 via-violet-600/25 to-fuchsia-600/10 blur-[120px] animate-pulse" />

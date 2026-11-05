@@ -320,10 +320,10 @@ export const products = [
     oldPrice: 1799,
     category: 'Food & Dining',
     isTrending: true,
-    image: 'photo-1558857563-b37cf5288544',
+    image: 'https://superboba.com/cdn/shop/articles/taro_milk_tea.jpg?v=1712864772',
     gallery: [
-      'photo-1558857563-b37cf5288544',
-      'photo-1541658016709-82535e94bc69',
+      'https://superboba.com/cdn/shop/articles/taro_milk_tea.jpg?v=1712864772',
+      'https://genchaboba.com/assets/img/menu/SignatureOriginals/taro-milk.png',
     ],
     tag: 'FANDOM FAVORITE',
     rating: '4.9',
