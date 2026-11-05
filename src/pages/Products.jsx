@@ -49,12 +49,18 @@ export default function Products() {
         if (selectedCategory === 'BTS Merch' && !product.isMerch) {
           return false
         }
-        if (
-          selectedCategory !== 'All' &&
-          selectedCategory !== 'BTS Merch' &&
-          product.category !== selectedCategory
-        ) {
-          return false
+        if (selectedCategory !== 'All' && selectedCategory !== 'BTS Merch') {
+          const target = selectedCategory.toLowerCase()
+          const prodCat = product.category.toLowerCase()
+          const matches =
+            prodCat === target ||
+            prodCat.includes(target) ||
+            target.includes(prodCat) ||
+            (target.includes('fashion') && prodCat.includes('clothes')) ||
+            (target.includes('clothes') && prodCat.includes('fashion')) ||
+            (target.includes('food') && prodCat.includes('food')) ||
+            (target.includes('game') && (prodCat.includes('game') || prodCat.includes('arcade')))
+          if (!matches) return false
         }
 
         // Search filter

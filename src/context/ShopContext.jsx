@@ -28,6 +28,7 @@ export function ShopProvider({ children }) {
   const [isCheckoutModalOpen, setCheckoutModalOpen] = useState(false)
   const [activeEventModal, setActiveEventModal] = useState(null)
   const [activeStoreModal, setActiveStoreModal] = useState(null)
+  const [quickViewProduct, setQuickViewProduct] = useState(null)
 
   // Session intro state
   const [showIntro, setShowIntro] = useState(() => {
@@ -241,6 +242,8 @@ export function ShopProvider({ children }) {
     setActiveEventModal,
     activeStoreModal,
     setActiveStoreModal,
+    quickViewProduct,
+    setQuickViewProduct,
     showIntro,
     dismissIntro,
     replayIntro,

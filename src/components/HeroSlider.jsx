@@ -19,7 +19,7 @@ const slides = [
     description:
       'Immerse yourself in our purple universe. Official BTS merchandise, luxury fashion, and exclusive pop-up experiences gathered in one iconic destination.',
     ctaText: 'SHOP BTS MERCH',
-    ctaLink: '/products?category=Fashion',
+    ctaLink: '/products?category=BTS%20Merch',
     image: 'photo-1514525253161-7a46d19cd819',
     badge: 'NEW DROP',
   },

@@ -55,9 +55,11 @@ export default function OfferBanner({ offer }) {
           </button>
 
           <Link
-            to={`/products?category=${encodeURIComponent(
-              offer.category.includes('All') ? 'All' : offer.category.split(' ')[0]
-            )}`}
+            to={
+              offer.category.includes('All')
+                ? '/products'
+                : `/products?category=${encodeURIComponent(offer.category)}`
+            }
             className="px-5 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white text-xs font-semibold uppercase tracking-[0.15em] flex items-center gap-1.5 shadow-md transition-all group/btn"
           >
             <span>{offer.cta || 'Shop Now'}</span>

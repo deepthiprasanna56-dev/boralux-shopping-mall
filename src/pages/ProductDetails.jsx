@@ -215,9 +215,17 @@ export default function ProductDetails() {
                     <span className="font-semibold uppercase tracking-wider text-purple-300">
                       Select Size
                     </span>
-                    <span className="text-purple-400/70 text-[11px] underline cursor-pointer">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        alert(
+                          'BORALUX Luxury Size Guide:\n• Small (S): Chest 36-38 in / Waist 30-32 in\n• Medium (M): Chest 40-42 in / Waist 32-34 in\n• Large (L): Chest 44-46 in / Waist 36-38 in\n• XL: Chest 48-50 in / Waist 40-42 in'
+                        )
+                      }
+                      className="text-purple-400/80 hover:text-purple-200 text-[11px] underline cursor-pointer bg-none border-0 p-0"
+                    >
                       Size Guide
-                    </span>
+                    </button>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {product.sizes.map((s) => (

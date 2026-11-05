@@ -154,7 +154,7 @@ export default function Offers() {
           </div>
 
           <Link
-            to="/products?category=Fashion"
+            to="/products?category=BTS%20Merch"
             className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500 text-white font-semibold text-xs uppercase tracking-[0.2em] shadow-lg transition-all flex items-center gap-2 whitespace-nowrap"
           >
             <span>Claim Fan Reward</span>

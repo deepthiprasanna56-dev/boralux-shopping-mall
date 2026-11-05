@@ -60,7 +60,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=Fashion" className="hover:text-purple-200 hover:underline">
+                <Link to="/products?category=BTS%20Merch" className="hover:text-purple-200 hover:underline">
                   BTS Merch Edit
                 </Link>
               </li>

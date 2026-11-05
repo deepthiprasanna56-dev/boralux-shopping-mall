@@ -6,7 +6,7 @@ import { imageUrl, money } from '../data/catalog'
 import Icon from './Icon'
 
 export default function ProductCard({ product, index = 0 }) {
-  const { addToCart, toggleWishlist, isInWishlist } = useShop()
+  const { addToCart, toggleWishlist, isInWishlist, setQuickViewProduct } = useShop()
 
   const isFavorite = isInWishlist(product.id)
   const discountPercent = product.oldPrice
@@ -63,14 +63,19 @@ export default function ProductCard({ product, index = 0 }) {
           <Icon name="heart" size={15} className={isFavorite ? 'fill-white' : ''} />
         </button>
 
-        {/* Quick View Link on hover */}
-        <Link
-          to={`/product/${product.id}`}
-          className="absolute inset-x-2 bottom-2 py-2 rounded-lg bg-purple-950/90 hover:bg-purple-900 border border-purple-400/40 text-purple-100 text-[10px] font-bold uppercase tracking-[0.18em] text-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-1.5 shadow-lg"
+        {/* Quick View Button on hover */}
+        <button
+          type="button"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            setQuickViewProduct(product)
+          }}
+          className="absolute inset-x-2 bottom-2 py-2 rounded-lg bg-purple-950/90 hover:bg-purple-800 border border-purple-400/40 text-purple-100 text-[10px] font-bold uppercase tracking-[0.18em] text-center backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-1.5 shadow-lg cursor-pointer"
         >
           <span>Quick View</span>
           <Icon name="arrow" size={12} />
-        </Link>
+        </button>
       </div>
 
       {/* Product Details */}

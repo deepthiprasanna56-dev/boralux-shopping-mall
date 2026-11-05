@@ -9,6 +9,7 @@ import Toast from './components/Toast'
 import CheckoutModal from './components/CheckoutModal'
 import EventModal from './components/EventModal'
 import StoreModal from './components/StoreModal'
+import QuickViewModal from './components/QuickViewModal'
 
 // Pages
 import Home from './pages/Home'
@@ -86,6 +87,7 @@ function Storefront() {
       <CheckoutModal />
       <EventModal />
       <StoreModal />
+      <QuickViewModal />
     </div>
   )
 }

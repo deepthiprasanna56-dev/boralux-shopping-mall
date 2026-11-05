@@ -7,11 +7,12 @@ import Icon from '../components/Icon'
 
 const categoryOptions = [
   'All',
-  'Fashion',
+  'Clothes & Fashion',
+  'Food & Dining',
+  'Games & Arcade',
   'Sports & Footwear',
   'Beauty',
   'Electronics',
-  'Accessories',
   'Groceries',
 ]
 
@@ -26,9 +27,15 @@ export default function StoreDirectory() {
     return stores.filter((store) => {
       // Category match
       if (selectedCategory !== 'All') {
+        const target = selectedCategory.toLowerCase()
+        const storeCat = store.category.toLowerCase()
         const matchesCategory =
-          store.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
-          (selectedCategory === 'Fashion' && store.category.includes('Fashion'))
+          storeCat.includes(target) ||
+          target.includes(storeCat) ||
+          (target.includes('clothes') && (storeCat.includes('clothes') || storeCat.includes('fashion') || storeCat.includes('fandom'))) ||
+          (target.includes('fashion') && (storeCat.includes('fashion') || storeCat.includes('clothes'))) ||
+          (target.includes('food') && storeCat.includes('food')) ||
+          (target.includes('game') && (storeCat.includes('game') || storeCat.includes('arcade')))
         if (!matchesCategory) return false
       }
 

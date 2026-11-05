@@ -123,8 +123,8 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* 6 Categories Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {/* Categories Grid (Clothes, Food, Games, Electronics, Footwear, Beauty, Groceries, Accessories) */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {categories.map((cat, idx) => (
             <CategoryCard key={cat.id} category={cat} index={idx} />
           ))}
@@ -192,7 +192,7 @@ export default function Home() {
                   <Icon name="arrow" size={15} />
                 </Link>
                 <Link
-                  to="/products?category=Fashion"
+                  to="/products?category=Clothes%20%26%20Fashion"
                   className="px-6 py-3.5 rounded-xl bg-purple-950/60 hover:bg-purple-900 border border-purple-500/30 text-white font-semibold text-xs uppercase tracking-[0.18em] transition-all"
                 >
                   Fashion Deals
@@ -243,7 +243,7 @@ export default function Home() {
             </div>
 
             <Link
-              to="/products?category=Fashion"
+              to="/products?category=BTS%20Merch"
               className="px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all flex items-center gap-2 w-fit"
             >
               <span>Explore All Merch</span>
