@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#150a2b" />
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#9333ea" stroke-width="2" stroke-opacity="0.6"/>
+  <!-- BTS Iconic Emblem -->
+  <path d="M12 11 L21 14.5 L21 33.5 L12 37 Z" fill="url(#purpleG)" />
+  <path d="M27 14.5 L36 11 L36 37 L27 33.5 Z" fill="url(#purpleG)" />
+  <defs>
+    <linearGradient id="purpleG" x1="12" y1="11" x2="36" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e879f9" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#9333ea" />
+    </linearGradient>
+  </defs>
+</svg>
